@@ -1,0 +1,83 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+
+--------------------------
+Sure, I'm ready to answer your questions. Please go ahead and ask.
+--------------------------
+The following questions require you to fill-in some pseudo-code. Are you ready?
+--------------------------
+Yes, I'm ready. Please proceed with the questions.
+--------------------------
+Let $T$ be a binary search tree with root node $x$. It is assumed that access to the children of any node can be obtained with $x.left$ and $x.right$. It holds that $x.left == NIL$ or $x.right == NIL$ if no left or right subtree exists. Complete the pseudo-code below for an algorithm that outputs the nodes of the binary search tree in sorted order from largest to smallest using $PRINT$.
+
+\begin{minipage}{8cm}
+\begin{algorithmic}
+\Function{PrintBSTReverseSorted}{Root $x$}
+\vspace{4.75cm}
+\EndFunction
+\end{algorithmic}
+\end{minipage}
+--------------------------
+Sure, I can help you fill-in the missing pseudo-code. Here's the completed algorithm:
+
+scss
+Copy code
+Function PrintBSTReverseSorted(Root x)
+    if x != NIL then
+        PrintBSTReverseSorted(x.right)  // traverse right subtree
+        PRINT(x.key)  // print the node value
+        PrintBSTReverseSorted(x.left)  // traverse left subtree
+    endif
+EndFunction
+
+
+This algorithm performs an inorder traversal of the binary search tree in reverse order (from largest to smallest). The function recursively traverses the right subtree of the root node, prints the node value, and then traverses the left subtree of the root node. The base case of the recursion is when the root node is NIL.
+--------------------------
+The diameter of an undirected and unweighted graph corresponds to the largest distance between two nodes in a graph. More specifically, the diameter is
+$$\operatorname{diam}(G) = \max_{(u,v) \in V \times V}\{\operatorname{dist}(u,v)\},$$ where $\operatorname{dist}(u,v)$ corresponds to the length of the shortest path between $u$ and $v$. Provide an algorithm that calculates the diameter of a graph $G=(V,E)$. Describe your algorithm in pseudo-code.
+--------------------------
+Sure, I can provide an algorithm that calculates the diameter of a graph. The algorithm uses a modified version of breadth-first search (BFS) to find the longest shortest path between any two nodes in the graph. Here's the pseudo-code:
+
+scss
+Copy code
+Function GraphDiameter(Graph G)
+    // Initialize variables
+    max_dist = 0
+    start_node = random_node_in_G
+
+    // Perform BFS from start_node to find the farthest node
+    dist_to_farthest_node = BFS(G, start_node)
+
+    // Perform BFS from farthest_node to find the diameter
+    diameter = BFS(G, farthest_node)
+
+    // Return the diameter
+    return diameter
+
+EndFunction
+
+Function BFS(Graph G, start_node)
+    // Initialize variables
+    dist = [infinity for v in G]
+    dist[start_node] = 0
+    queue = [start_node]
+
+    // Perform BFS
+    while queue is not empty do
+        current_node = dequeue(queue)
+        for neighbor in G.adjacent(current_node) do
+            if dist[neighbor] == infinity then
+                dist[neighbor] = dist[current_node] + 1
+                enqueue(queue, neighbor)
+            endif
+        endfor
+    endwhile
+
+    // Find the farthest node and return its distance
+    farthest_node = argmax(dist)
+    return dist[farthest_node]
+EndFunction
+
+
+This algorithm first chooses a random node as the starting point and performs a BFS from that node to find the farthest node. The distance to the farthest node is then used as the starting point for a second BFS to find the diameter of the graph.
+
+The BFS function uses a queue to keep track of the nodes to visit and an array to keep track of the distance from the start node to each node. It starts by initializing the distance of the start node to 0 and the distance of all other nodes to infinity. Then, it processes each neighbor of the current node and updates the distance of the neighbor if it has not been visited before. The function returns the distance to the farthest node.

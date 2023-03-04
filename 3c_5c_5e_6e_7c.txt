@@ -1,0 +1,43 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Sure, I'm ready to help. Go ahead and ask your questions, and I'll do my best to provide concise and accurate answers.
+--------------------------
+To all questions from now on, please just answer with a single word: "True" or "False"
+--------------------------
+Sure, I can provide answers in that format. Please go ahead and ask your questions.
+--------------------------
+Is the following tree a binary search tree?
+
+\vspace{0.25cm}
+\begin{tabular}{p{8cm}p{6cm}}
+\begin{minipage}{8cm}
+\hspace{0.5cm}
+\begin{tikzpicture}[level/.style={sibling distance=30mm/#1}]
+\node [circle,draw] (a){7}
+    child {node [circle,draw] (b) {6}
+        child {node [circle,draw] (c) {5}}
+        child {node [circle,draw] (d) {8}}
+    }
+    child {node [circle,draw] (e) {10}
+        child {node [circle,draw] (f) {9}}
+        child {node [circle,draw] (g) {12}}
+    };
+\end{tikzpicture}
+--------------------------
+False.
+--------------------------
+\item An undirected and unweighted graph is given as an adjacency matrix. Then the running time of the DFS algorithm is $O(|V|+|E|)$.
+--------------------------
+False.
+--------------------------
+Let $G=(V,E)$ be a directed, unweighted graph. A topological sorting exists only if the graph is acyclic.
+--------------------------
+True.
+--------------------------
+In a directed, acyclic graph, the component graph corresponds to the original graph.
+--------------------------
+True.
+--------------------------
+ If a graph does not contain a negative weight cycle, then the result of the Dijkstra algorithm is correct.
+--------------------------
+True.

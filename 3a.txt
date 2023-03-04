@@ -1,0 +1,58 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Sure, I'll do my best to help you with your questions about algorithms! Please go ahead and ask.
+--------------------------
+Perform the DecreaseKey(0, 3) operation on the following Max-Heap (in this operation, the key of the root element is set to 3). Draw the resulting Max-Heap.
+\begin{tikzpicture}[level/.style={sibling distance=30mm/#1}]
+\node [circle,draw] (a){12}
+    child {node [circle,draw] (b) {10}
+        child {node [circle,draw] (c) {7}}
+    }
+    child {node [circle,draw] (e) {8}
+        child {node [circle,draw] (f) {4}}
+        child {node [circle,draw] (g) {1}}
+    };
+\end{tikzpicture}
+--------------------------
+Sure! To perform the DecreaseKey(0, 3) operation on this Max-Heap, we need to first replace the key of the root element (12) with the new key (3). After this, we may need to "bubble down" the new root element until the heap property is restored. Here are the steps to do that:
+
+Replace the key of the root element (12) with the new key (3), resulting in the following heap:
+
+\begin{tikzpicture}[level/.style={sibling distance=30mm/#1}]
+\node [circle,draw] (a){3}
+child {node [circle,draw] (b) {10}
+child {node [circle,draw] (c) {7}}
+}
+child {node [circle,draw] (e) {8}
+child {node [circle,draw] (f) {4}}
+child {node [circle,draw] (g) {1}}
+};
+\end{tikzpicture}
+
+Check if the new root element (3) is greater than its children. Since 3 is smaller than 10 and 8, we need to "bubble down" the new root element. Swap the new root element with its largest child, which is 10:
+
+\begin{tikzpicture}[level/.style={sibling distance=30mm/#1}]
+\node [circle,draw] (a){10}
+child {node [circle,draw] (b) {3}
+child {node [circle,draw] (c) {7}}
+}
+child {node [circle,draw] (e) {8}
+child {node [circle,draw] (f) {4}}
+child {node [circle,draw] (g) {1}}
+};
+\end{tikzpicture}
+
+Check if the new root element (10) is greater than its children. Since 10 is greater than both its children, we are done.
+
+Therefore, the resulting Max-Heap after the DecreaseKey(0, 3) operation is:
+
+\begin{tikzpicture}[level/.style={sibling distance=30mm/#1}]
+\node [circle,draw] (a){10}
+child {node [circle,draw] (b) {3}
+child {node [circle,draw] (c) {7}}
+}
+child {node [circle,draw] (e) {8}
+child {node [circle,draw] (f) {4}}
+child {node [circle,draw] (g) {1}}
+};
+\end{tikzpicture}

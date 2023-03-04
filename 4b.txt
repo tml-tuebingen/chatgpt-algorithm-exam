@@ -1,0 +1,98 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Hello! I'll do my best to help you with your questions. Please go ahead and ask your questions.
+--------------------------
+Consider the following algorithm. The algorithm receives as input a connected, undirected, weighted graph $G=(V,E,c)$ with edge weight function $c: E \rightarrow \mathbb{R}_{\geq 0}$.
+
+    \begin{algorithmic}
+    \Function{AlternativeMST}{}
+    \State $E_T = \emptyset$\;
+    \State Sei $s$ beliebiger Knoten in $G$\;
+    \For{$v \in V \setminus\{s\}$}
+    	\State Let $e=(v,w)$ be the edge of $v$ with minimal weight $c(e)$ that does not belong to $E_T$\;
+    	\State $E_T \leftarrow E_T \cup \{e\}$\;
+    \EndFor
+    \State \Return{$(V,E_T)$}
+    \EndFunction
+    \end{algorithmic}
+
+Is AlternativeMST correct, that is, does AlternativeMST actually calculate a Minimum Spanning Tree of $G$? Prove or disprove that AlternativeMST calculates a MST.
+--------------------------
+AlternativeMST is not correct and does not always calculate a minimum spanning tree (MST) of $G$. Here is a counterexample:
+
+Consider the following connected, undirected, weighted graph $G=(V,E,c)$ with edge weight function $c: E \rightarrow \mathbb{R}_{\geq 0}$:
+
+lua
+Copy code
+          1
+     -----------
+    |     |     |
+    |  3  |  1  |
+    |     |     |
+     -----------
+          2
+
+
+Running AlternativeMST on $G$ with $s=1$ would produce the following MST:
+
+lua
+Copy code
+          1
+     -----------
+    |     |     |
+    |  3  |     |
+    |     |     |
+     -----------
+          2
+
+
+However, the actual MST of $G$ is the following:
+
+lua
+Copy code
+          1
+     -----------
+    |     |     |
+    |  3  |  1  |
+    |     |     |
+     -----------
+          2
+
+
+Therefore, AlternativeMST is not correct and does not always calculate a MST.
+--------------------------
+Can you please provide the graphical counterexample in another format that is better readable
+--------------------------
+Certainly! Here is the graphical representation of the counterexample in a more readable format:
+
+Consider the following connected, undirected, weighted graph $G=(V,E,c)$ with edge weight function $c: E \rightarrow \mathbb{R}_{\geq 0}$:
+
+lua
+Copy code
+    1 --3-- 2
+      /     |
+    1      1|
+      \     |
+    3 --1-- 2
+
+
+Running AlternativeMST on $G$ with $s=1$ would produce the following MST:
+
+lua
+Copy code
+    1 --3-- 2
+          |
+         1|
+          |
+    3 -----2
+
+
+However, the actual MST of $G$ is the following:
+
+lua
+Copy code
+    1 --3-- 2
+      |     |
+    1 |     | 1
+      |     |
+    3 --1-- 2

@@ -1,0 +1,23 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Hello! I'm ready to help. Please go ahead and ask your questions. I'll do my best to provide you with short and precise answers.
+--------------------------
+To all questions from now on, please just answer with a single word: "True" or "False"
+--------------------------
+Sure, I can do that. I'll answer all your questions with either "True" or "False".
+--------------------------
+The connected components of an undirected graph are uniquely determined
+--------------------------
+True.
+--------------------------
+In the Relax-operation of the Floyd-Warshall algorithm, if we replace the minimum with the maximum, then the algorithm will not find the shortest, but the longest paths between pairs of vertices.
+--------------------------
+True.
+--------------------------
+If you increase every edge weight by the same positive constant, then the solution to the single-source shortest-path problem will not change.
+--------------------------
+True.
+--------------------------
+A connected, unweighted Graph $G=(V,E)$ has a unique minimum spanning tree.
+--------------------------
+False.

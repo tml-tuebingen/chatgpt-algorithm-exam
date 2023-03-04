@@ -1,0 +1,79 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+
+--------------------------
+Sure! I'll do my best to help you with your questions about algorithms. Fire away!
+--------------------------
+Given an MxN matrix A of positive numbers, we can imagine this matrix as a game board of size MxN. The entry at $(i,j)$ corresponds to the costs that must be paid to enter field $(i,j)$  of the game board. We now want to move a game piece as cost-effectively as possible from the upper left field $(1,1)$ to the lower right field $(N,M)$. In each step, the game piece may only move one field down or one field to the right. So it can go from field $(i,j)$ to field $(i+1,j)$ or to field $(i,j+1)$. We are interested in the costs of the cheapest path from $(1,1)$ to $(N,M)$. In the following example, the cheapest path costs 33.
+
+\newcommand\tikznode[2]{\tikz[remember picture,baseline=(#1.base)]{\node(#1)[inner sep=0pt]{#2};}}
+\begin{equation*}
+   A = \begin{pmatrix}
+  1 & 7 & 8 & 4 & 6 \\
+  6 & 7 & 3 & 9 & 2 \\
+  3 & 8 & 1 & 2 & 4 \\
+  7 & 1 & 7 & 3 & 7 \\
+  2 & 9 & 8 & 9 & 3 \\
+ \end{pmatrix},\qquad\text{A cheapest path } A= \begin{pmatrix}
+  \tikznode{1}{1} & 7 & 8 & 4 & 6 \\
+  \tikznode{2}{6} & \tikznode{3}{7} & \tikznode{4}{3} & 9 & 2 \\
+  3 & 8 & \tikznode{5}{1} & \tikznode{6}{2} & 4 \\
+  7 & 1 & 7 & \tikznode{7}{3} & \tikznode{8}{7} \\
+  2 & 9 & 8 & 9 & \tikznode{9}{3} \\
+ \end{pmatrix} 
+\end{equation*}
+\tikz[overlay,remember picture]{\draw[-](1)--(2);\draw[-](2)--(3);\draw[-](3)--(4);\draw[-](4)--(5);\draw[-](5)--(6);\draw[-](6)--(7);\draw[-](7)--(8);\draw[-](8)--(9);}
+
+ This problem can be solved with dynamic programming. Set up an appropriate recursive equation.
+
+ Hint: There is a typo in this exercise, you can assume M=N.
+
+--------------------------
+The recursive equation for solving this problem using dynamic programming is as follows:
+
+Let $C(i,j)$ be the minimum cost to reach cell $(i,j)$. The base cases are $C(1,1) = A(1,1)$, $C(i,1) = \sum_{k=1}^{i} A(k,1)$, and $C(1,j) = \sum_{k=1}^{j} A(1,k)$ for all $1 \leq i,j \leq N$.
+
+For $i,j > 1$, the recursive formula is given by:
+
+$$C(i,j) = A(i,j) + \min(C(i-1,j),C(i,j-1))$$
+
+The solution to the problem is $C(N,M)$. This recursive formula computes the minimum cost to reach each cell $(i,j)$ in the matrix by considering the minimum cost to reach the cells immediately above and to the left of $(i,j)$. By computing this recursively and storing the results in a table, we avoid redundant computations and obtain the solution to the problem in $O(N^2)$ time complexity.
+--------------------------
+Now complete the following pseudo-code to solve the problem in runtime $O(MN)$.
+
+\Function{MatrixTravel}{Cost matrix $A$}
+\State $T=$ MxN matrix filled with zeros
+\For{$i = 1$ \textbf{to} $M$}
+\For{$j = 1$ \textbf{to} $N$}
+\vspace{8cm}
+\EndFor
+\EndFor
+\State \Return{T[M,N]}
+\EndFunction
+\end{algorithmic}
+
+--------------------------
+Sure, here's the completed pseudo-code to solve the problem in $O(MN)$ runtime:
+
+\Function{MatrixTravel}{Cost matrix $A$}
+\State $T=$ MxN matrix filled with zeros
+\For{$i = 1$ \textbf{to} $M$}
+\For{$j = 1$ \textbf{to} $N$}
+\If{$i = 1$ and $j = 1$}
+\State $T(1,1) = A(1,1)$
+\ElsIf{$i = 1$}
+\State $T(1,j) = A(1,j) + T(1,j-1)$
+\ElsIf{$j = 1$}
+\State $T(i,1) = A(i,1) + T(i-1,1)$
+\Else
+\State $T(i,j) = A(i,j) + \min(T(i-1,j),T(i,j-1))$
+\EndIf
+\EndFor
+\EndFor
+\State \Return{T(M,N)}
+\EndFunction
+
+This solution uses dynamic programming to compute the minimum cost of reaching each cell $(i,j)$ in the matrix. It initializes a matrix $T$ of the same size as $A$ filled with zeros. Then, it iterates through each cell of $T$, filling in the minimum cost to reach that cell using the recursive formula in the previous answer.
+
+The base cases are handled by initializing $T(1,1) = A(1,1)$ and filling in the first row and column of $T$ using the cumulative sum of the corresponding rows and columns of $A$. Finally, the solution is given by $T(M,N)$.
+
+This algorithm runs in $O(MN)$ time complexity since it iterates through each cell of the $M$x$N$ matrix $T$ only once, and the time required to fill in each cell is constant.
