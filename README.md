@@ -1,1 +1,1 @@
-# chatgpt-algorithm-exam
+This repository contains the transcript of our conversations with ChatGTP. Every text file contains the transcript of one conversation. The names of the text files correpond to the exercise numbers in the exam.
