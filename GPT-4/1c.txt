@@ -1,0 +1,22 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+
+--------------------------
+Hello! I'm ready to help you with your computer science exam questions about algorithms. Please provide the questions and I'll do my best to give you short, precise answers.
+--------------------------
+Prove that $\sqrt{n}\in o(n^{2/3})$ holds. Please be short and precise.
+--------------------------
+To prove that $\sqrt{n} \in o(n^{2/3})$, we need to show that $\lim_{n\to\infty} \frac{\sqrt{n}}{n^{2/3}} = 0$.
+
+Using the properties of exponents, we can rewrite the expression inside the limit as:
+
+$\lim_{n\to\infty} \frac{n^{1/2}}{n^{2/3}} = \lim_{n\to\infty} n^{\frac{1}{2} - \frac{2}{3}}$
+
+Now, subtract the exponents:
+
+$\frac{1}{2} - \frac{2}{3} = \frac{3 - 4}{6} = -\frac{1}{6}$
+
+So the expression becomes:
+
+$\lim_{n\to\infty} n^{-1/6}$
+
+As $n$ approaches infinity, $n^{-1/6}$ approaches 0. Therefore, the limit is 0, and we have shown that $\sqrt{n} \in o(n^{2/3})$.

@@ -1,0 +1,15 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Hello! I'm ready to help you with your computer science exam questions. Please go ahead and provide the questions, and I will do my best to give you short and precise answers.
+--------------------------
+Which of the following statements implies that $f(n) \in \Omega(g(n))$ holds? Exactly one statement is true. Please answer with a single letter a, b, c, or d.
+
+a) $\square$ $f(n) \leq 4g(n)$ for all $n \geq 1$
+
+b) $\square$ $f(n) \geq 4g(n)$ for all $n \geq 136$
+
+c) $\square$ $\lim_{n\to\infty}\frac{f(n)}{g(n)}=0$
+
+d) $\square$ None of the above statements.
+--------------------------
+b) $\square$ $f(n) \geq 4g(n)$ for all $n \geq 136$

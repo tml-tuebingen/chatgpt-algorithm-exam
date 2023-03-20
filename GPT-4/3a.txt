@@ -1,0 +1,30 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Hello! I'm ready to help you with your computer science exam questions about algorithms. Please provide the questions, and I will do my best to give short and precise answers.
+--------------------------
+Perform the DecreaseKey(0, 3) operation on the following Max-Heap (in this operation, the key of the root element is set to 3). Draw the resulting Max-Heap.
+\begin{tikzpicture}[level/.style={sibling distance=30mm/#1}]
+\node [circle,draw] (a){12}
+    child {node [circle,draw] (b) {10}
+        child {node [circle,draw] (c) {7}}
+    }
+    child {node [circle,draw] (e) {8}
+        child {node [circle,draw] (f) {4}}
+        child {node [circle,draw] (g) {1}}
+    };
+\end{tikzpicture}
+--------------------------
+To perform the DecreaseKey(0, 3) operation, we first change the root value from 12 to 3, and then we need to restore the Max-Heap property by moving the decreased key down the tree.
+
+Here's the resulting Max-Heap after performing the DecreaseKey operation:
+
+markdown
+Copy code
+         10
+        /  \
+       7    8
+      /    / \
+     3    4   1
+
+
+The DecreaseKey operation involved swapping the root value (3) with its largest child (10) and then swapping the new root's child value (3) with its largest child (7) to restore the Max-Heap property.

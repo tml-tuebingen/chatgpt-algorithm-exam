@@ -1,0 +1,41 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Hello! I'm ready to help you with your computer science exam questions. Please go ahead and provide the questions, and I'll do my best to give short and precise answers.
+--------------------------
+To all questions from now on, there is exactly one correct answer.
+--------------------------
+Understood. Please provide the questions, and I will do my best to give the correct answer for each one.
+--------------------------
+Let $G=(V,E)$ be a directed graph. Which of the following algorithmic problems can be solved with DFS? 
+
+a) Finding a source node.
+
+b) Finding a sink node.
+
+c) Both problems.
+
+d) Neither of the two problems.
+--------------------------
+c) Both problems.
+
+DFS (Depth-First Search) can be used to find both a source node (a node with no incoming edges) and a sink node (a node with no outgoing edges) in a directed graph.
+--------------------------
+For graphs with $\Theta(|V|^2)$ many edges, the Dijkstra algorithm is best implemented using a
+
+a) Array.
+
+b) Heap.
+--------------------------
+b) Heap.
+
+When there are Θ(|V|^2) edges, implementing Dijkstra's algorithm with a heap (such as a binary or Fibonacci heap) is more efficient, as it reduces the overall time complexity of the algorithm.
+--------------------------
+If we could find the pivot element in the QuickSort algorithm in $O(1)$ time, then we would get the best guarantee on the running time with
+
+a) the arithmetic mean
+
+b) the median
+--------------------------
+b) the median
+
+If we could find the median element as the pivot in O(1) time, QuickSort would have the best-case guaranteed running time. The median ensures the partition is balanced, leading to an O(n log n) time complexity.

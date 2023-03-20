@@ -1,0 +1,27 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Hello! I'm ready to help you with your computer science exam questions about algorithms. Please go ahead and ask the questions, and I will do my best to provide short and precise answers.
+--------------------------
+To all questions from now on, please just answer with a single word: "True" or "False"
+--------------------------
+Understood.
+--------------------------
+For $f(n)=n\mod 20$ and $g(n)=n^2$, is it true or false that $f \in o(g)$?
+--------------------------
+True
+--------------------------
+For $f(n)=n\mod 20$ and $g(n)=n^2$, is it true or false that $f \in \mathcal{O}(g)$?
+--------------------------
+True
+--------------------------
+For $f(n)=n\mod 20$ and $g(n)=n^2$, is it true or false that $f \in \Theta(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=n\mod 20$ and $g(n)=n^2$, is it true or false that $f \in \Omega(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=n\mod 20$ and $g(n)=n^2$, is it true or false that $f \in \omega(g)$?
+--------------------------
+False

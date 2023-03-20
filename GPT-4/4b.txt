@@ -1,0 +1,45 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Hello! I'm ready to help you with your computer science exam questions about algorithms. Please go ahead and provide the questions, and I will do my best to give you short, precise answers.
+--------------------------
+Consider the following algorithm. The algorithm receives as input a connected, undirected, weighted graph $G=(V,E,c)$ with edge weight function $c: E \rightarrow \mathbb{R}_{\geq 0}$.
+
+    \begin{algorithmic}
+    \Function{AlternativeMST}{}
+    \State $E_T = \emptyset$\;
+    \State Sei $s$ beliebiger Knoten in $G$\;
+    \For{$v \in V \setminus\{s\}$}
+    	\State Let $e=(v,w)$ be the edge of $v$ with minimal weight $c(e)$ that does not belong to $E_T$\;
+    	\State $E_T \leftarrow E_T \cup \{e\}$\;
+    \EndFor
+    \State \Return{$(V,E_T)$}
+    \EndFunction
+    \end{algorithmic}
+
+Is AlternativeMST correct, that is, does AlternativeMST actually calculate a Minimum Spanning Tree of $G$? Prove or disprove that AlternativeMST calculates a MST.
+--------------------------
+The given AlternativeMST algorithm does not always calculate a Minimum Spanning Tree (MST) of G. Let's disprove it using a counterexample.
+
+Consider a connected, undirected, weighted graph G with vertices V = {A, B, C, D} and edges E = {(A, B), (A, C), (A, D), (B, C), (B, D), (C, D)} with weights given by the edge weight function c:
+
+c(A, B) = 1
+c(A, C) = 2
+c(A, D) = 3
+c(B, C) = 4
+c(B, D) = 5
+c(C, D) = 6
+
+Now, let's apply the AlternativeMST algorithm:
+
+Set s = A (an arbitrary vertex).
+For vertex B, the minimal weight edge is (A, B) with weight 1. Add this edge to E_T.
+For vertex C, the minimal weight edge is (A, C) with weight 2. Add this edge to E_T.
+For vertex D, the minimal weight edge is (A, D) with weight 3. Add this edge to E_T.
+
+The resulting tree T = (V, E_T) has edges E_T = {(A, B), (A, C), (A, D)} and total weight 1 + 2 + 3 = 6.
+
+However, the actual MST of G is:
+
+MST = {(A, B), (A, C), (B, D)} with total weight 1 + 2 + 5 = 8.
+
+Since the resulting tree from the AlternativeMST algorithm does not match the actual MST, we can conclude that the AlternativeMST algorithm does not always calculate a Minimum Spanning Tree of G.

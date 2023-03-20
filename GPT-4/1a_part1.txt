@@ -1,0 +1,105 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Hello! I'm ready to help you with your computer science exam questions. Please go ahead and provide the questions, and I'll do my best to give you short and precise answers.
+--------------------------
+To all questions from now on, please just answer with a single word: "True" or "False"
+--------------------------
+Understood.
+--------------------------
+For $f(n)=sin(n)$ and $g(n)=n$, is it true or false that $f \in o(g)$?
+--------------------------
+True
+--------------------------
+For $f(n)=sin(n)$ and $g(n)=n$, is it true or false that $f \in \mathcal{O}(g)$?
+--------------------------
+True
+--------------------------
+For $f(n)=sin(n)$ and $g(n)=n$, is it true or false that $f \in \Theta(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=sin(n)$ and $g(n)=n$, is it true or false that $f \in \Omega(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=sin(n)$ and $g(n)=n$, is it true or false that $f \in \omega(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=n^2 + cos(n)$ and $g(n)=n^2 + \frac{2}{n}$, is it true or false that $f \in o(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=n^2 + cos(n)$ and $g(n)=n^2 + \frac{2}{n}$, is it true or false that $f \in \mathcal{O}(g)$?
+--------------------------
+True
+--------------------------
+For $f(n)=n^2 + cos(n)$ and $g(n)=n^2 + \frac{2}{n}$, is it true or false that $f \in \Theta(g)$?
+--------------------------
+True
+--------------------------
+For $f(n)=n^2 + cos(n)$ and $g(n)=n^2 + \frac{2}{n}$, is it true or false that $f \in \Omega(g)$?
+--------------------------
+True
+--------------------------
+For $f(n)=n^2 + cos(n)$ and $g(n)=n^2 + \frac{2}{n}$, is it true or false that $f \in \omega(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=(\sqrt{5})^{n}$ and $g(n)=4^n$, is it true or false that $f \in o(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=(\sqrt{5})^{n}$ and $g(n)=4^n$, is it true or false that $f \in \mathcal{O}(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=(\sqrt{5})^{n}$ and $g(n)=4^n$, is it true or false that $f \in \Theta(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=(\sqrt{5})^{n}$ and $g(n)=4^n$, is it true or false that $f \in \Omega(g)$?
+--------------------------
+True
+--------------------------
+For $f(n)=(\sqrt{5})^{n}$ and $g(n)=4^n$, is it true or false that $f \in \omega(g)$?
+--------------------------
+True
+--------------------------
+For $f(n)=\log(n^n)$ and $g(n)=n^{2/3}$, is it true or false that $f \in o(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=\log(n^n)$ and $g(n)=n^{2/3}$, is it true or false that $f \in \mathcal{O}(g)$?
+--------------------------
+True
+--------------------------
+For $f(n)=\log(n^n)$ and $g(n)=n^{2/3}$, is it true or false that $f \in \Theta(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=\log(n^n)$ and $g(n)=n^{2/3}$, is it true or false that $f \in \Omega(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=\log(n^n)$ and $g(n)=n^{2/3}$, is it true or false that $f \in \omega(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=n\mod 20$ and $g(n)=n^2$, is it true or false that $f \in o(g)$?
+--------------------------
+True
+--------------------------
+For $f(n)=n\mod 20$ and $g(n)=n^2$, is it true or false that $f \in \mathcal{O}(g)$?
+--------------------------
+True
+--------------------------
+For $f(n)=n\mod 20$ and $g(n)=n^2$, is it true or false that $f \in \Theta(g)$?
+--------------------------
+False
+--------------------------
+For $f(n)=n\mod 20$ and $g(n)=n^2$, is it true or false that $f \in \Omega(g)$?
+--------------------------
+!
+You've reached the current usage cap for GPT-4. You can continue with the default model now, or try again after 2:56 PM. Learn more
+Use default model

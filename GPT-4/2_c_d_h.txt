@@ -1,0 +1,51 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Hello! I'm ready to help you with your computer science exam questions. Please go ahead and provide the questions, and I'll do my best to give short and precise answers.
+--------------------------
+If we could find the pivot element in the QuickSort algorithm in $O(1)$ time, then we would get the best guarantee on the running time with the arithmetic meanor the the median?
+--------------------------
+If you could find the pivot element in O(1) time and always choose the median element as the pivot, then QuickSort would be guaranteed to have the best-case running time of O(n log n), where n is the number of elements being sorted. Choosing the median element as the pivot ensures that the array is consistently divided into two equal or almost equal parts, resulting in a balanced partitioning, which leads to the optimal O(n log n) average-case running time.
+--------------------------
+So in short, the arithmetic mean or the the median?
+--------------------------
+In short, the median. Choosing the median element as the pivot ensures the best-case running time for QuickSort.
+--------------------------
+Which of the following is correct? The principle of “Memoization” in dynamic programming means that
+
+a) we store the dynamic-programming recurrence in a static array so that it may be applied at each level of recursion.
+
+b) we save the solutions of smaller subproblems if we need them again.
+
+c) the dynamic-programming algorithm can remember the current location in the recursion tree.
+
+d) we will remember the recursions occurring in dynamic programming for future exams.
+--------------------------
+b) we save the solutions of smaller subproblems if we need them again.
+--------------------------
+Which of the following properties is not a desired property of a hash function $h(x)?$
+
+a) $h(x)$ should be computable in $O(1)$ time.
+
+b) The values of $h(x)$ should be within the size of the hash table.
+
+c) For different $x$, $h(x)$ should also assume different values.
+
+d) If $x_1$ to $x_n$ are the elements to be inserted into the hash table, then $h(x_1)$ to $h(x_n)$ should be evenly distributed over the natural numbers.
+--------------------------
+d) If $x_1$ to $x_n$ are the elements to be inserted into the hash table, then $h(x_1)$ to $h(x_n)$ should be evenly distributed over the natural numbers.
+
+This statement is incorrect because the hash values should be evenly distributed over the range of the hash table, not over the natural numbers. The range of the hash table is generally much smaller than the set of all natural numbers.
+--------------------------
+Which of the following is correct? If $T(n) = 2T(n/3) + \sqrt{n}$ holds, then we also have
+
+a) $T(n) = \Theta(\sqrt{n})$
+
+b) $T(n) = \Theta(n^2)$
+
+c) $T(n) = \Theta(n^{\log_3(2)})$
+
+d) $T(n) = \Theta(n^{\log(3))}$
+--------------------------
+c) $T(n) = \Theta(n^{\log_3(2)})$
+
+By applying the Master Theorem, this recurrence relation can be categorized as Case 2, where the work done at the root is asymptotically larger than the work done in the recursion. Therefore, the solution is $T(n) = \Theta(n^{\log_3(2)})$.

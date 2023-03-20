@@ -1,0 +1,66 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Hello! I'm ready to help you with your computer science exam questions about algorithms. Please go ahead and provide the questions, and I will do my best to give you short and precise answers.
+--------------------------
+The following questions require you to fill-in some pseudo-code. Are you ready?
+--------------------------
+Yes, I'm ready. Please provide the questions, and I will do my best to provide pseudo-code answers.
+--------------------------
+Let $T$ be a binary search tree with root node $x$. It is assumed that access to the children of any node can be obtained with $x.left$ and $x.right$. It holds that $x.left == NIL$ or $x.right == NIL$ if no left or right subtree exists. Complete the pseudo-code below for an algorithm that outputs the nodes of the binary search tree in sorted order from largest to smallest using $PRINT$.
+
+\begin{minipage}{8cm}
+\begin{algorithmic}
+\Function{PrintBSTReverseSorted}{Root $x$}
+\vspace{4.75cm}
+\EndFunction
+\end{algorithmic}
+\end{minipage}
+--------------------------
+Here's the pseudo-code for the algorithm that prints the nodes of a binary search tree in reverse sorted order (largest to smallest):
+
+\begin{minipage}{8cm}
+\begin{algorithmic}
+\Function{PrintBSTReverseSorted}{Root $x$}
+\If{$x \neq NIL$}
+\State \Call{PrintBSTReverseSorted}{$x.right$}
+\State $PRINT(x)$
+\State \Call{PrintBSTReverseSorted}{$x.left$}
+\EndIf
+\EndFunction
+\end{algorithmic}
+\end{minipage}
+--------------------------
+The diameter of an undirected and unweighted graph corresponds to the largest distance between two nodes in a graph. More specifically, the diameter is
+$$\operatorname{diam}(G) = \max_{(u,v) \in V \times V}\{\operatorname{dist}(u,v)\},$$ where $\operatorname{dist}(u,v)$ corresponds to the length of the shortest path between $u$ and $v$. Provide an algorithm that calculates the diameter of a graph $G=(V,E)$. Describe your algorithm in pseudo-code.
+--------------------------
+To calculate the diameter of an undirected and unweighted graph, you can use a modified Breadth-First Search (BFS) algorithm. Here's the pseudo-code for the algorithm:
+
+scss
+Copy code
+Function Diameter(G)
+    max_diameter = 0
+    for each vertex u in V(G)
+        dist = BFS(G, u)
+        max_u = max(dist)
+        if max_u > max_diameter
+            max_diameter = max_u
+    return max_diameter
+
+Function BFS(G, start)
+    for each vertex u in V(G)
+        dist[u] = infinity
+    dist[start] = 0
+    queue = empty queue
+    enqueue(queue, start)
+    while not isEmpty(queue)
+        u = dequeue(queue)
+        for each neighbor v of u
+            if dist[v] == infinity
+                dist[v] = dist[u] + 1
+                enqueue(queue, v)
+    return dist
+
+
+The Diameter function iterates over all vertices in the graph, calling the BFS function for each vertex. It calculates the maximum distance from the vertex to any other vertex in the graph and keeps track of the overall maximum distance (diameter).
+
+The BFS function is a standard Breadth-First Search algorithm that takes the graph and a starting vertex as input, and it calculates the shortest distances from the starting vertex to all other vertices in the graph. It returns an array of distances, which is used by the Diameter function to determine the maximum distance for each vertex.

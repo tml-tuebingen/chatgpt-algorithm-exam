@@ -1,0 +1,137 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Hello! I'm ready to help you with your computer science exam questions. Please provide the questions, and I'll do my best to give short and precise answers.
+--------------------------
+What is the Best-Case running time of the following algorithm in relation to the length $n$ of the input array A?
+
+\begin{algorithmic}
+\Function{ArrayFunction}{Array A}
+\For{i=1,\dots,A.length}
+    \State A[i] = i
+\EndFor
+\State A = QuickSortWithLastElementAsPivot(A)
+\State \Return{A}
+\EndFunction
+\end{algorithmic}
+--------------------------
+The best-case running time of the given algorithm can be analyzed by looking at its two main parts:
+
+The loop that initializes the array A[i] = i, which has a running time of O(n) as it iterates through the entire length of the array.
+The call to QuickSortWithLastElementAsPivot(A), which in the best case has a running time of O(n log n) when the chosen pivot results in a balanced partition.
+
+Therefore, the best-case running time of the given algorithm is O(n) + O(n log n), which simplifies to O(n log n) as it is the dominating term.
+--------------------------
+What are the Best-Case and Worst-Case running time of the following algorithm in relation to the length $n$ of the input array A?
+
+\begin{algorithmic}
+\Function{ArrayFunction}{Array A}
+\For{$j=2$ to A.length}
+    \State key $= A[j]$
+    \State $i= j-1$
+    \While{$i>0$ and A[i]>key}
+        \State $A[i+1]= A[i]$
+        \State $i= i-1$
+    \EndWhile
+    \State $A[i+1]=$ key
+\EndFor  
+\State \Return{A}
+\EndFunction
+\end{algorithmic}
+--------------------------
+This algorithm is an implementation of the Insertion Sort algorithm. Let's analyze the best-case and worst-case running times in relation to the length n of the input array A:
+
+Best-Case: The best-case scenario for Insertion Sort is when the input array A is already sorted in ascending order. In this case, the inner while loop will not execute any iterations, resulting in a linear running time. So the best-case running time is O(n).
+
+Worst-Case: The worst-case scenario for Insertion Sort is when the input array A is sorted in descending order. In this case, the inner while loop will execute the maximum number of iterations, resulting in a quadratic running time. So the worst-case running time is O(n^2).
+--------------------------
+What is a Worst-Case input sequence of length $n$ for the algorithm in the previous question?
+--------------------------
+The worst-case input sequence for the Insertion Sort algorithm (from the previous question) is when the input array is sorted in descending order.
+
+For an array A of length n, the worst-case input sequence would look like:
+
+A = [n, n-1, n-2, ..., 3, 2, 1]
+
+In this case, the algorithm will have to compare and shift elements in the array for the maximum number of iterations possible, resulting in a quadratic running time of O(n^2).
+--------------------------
+The following program calculates a hash function. Which hash function is calculated by the program?
+
+\begin{algorithmic}
+\Function{HashFunction}{Integer $n$}
+\State $n = n+2$
+\State $n = 7*n$
+\While{$n\geq 153$} 
+    \State $n = n - 153$
+\EndWhile 
+\State \Return{n}
+\EndFunction
+\end{algorithmic}
+--------------------------
+The given program calculates a hash function that maps an integer n to a value within the range [0, 152]. This is done through the following steps:
+
+Add 2 to the input value: $n = n + 2$
+Multiply the result by 7: $n = 7 * n$
+Perform modulo 153 operation using a while loop: $n = n \mod 153$
+
+The specific hash function implemented here doesn't have a widely-known name, but it can be described as a combination of arithmetic operations (addition, multiplication) followed by a modulo operation. In a more compact form, the hash function can be represented as:
+
+$h(n) = (7 * (n + 2)) \mod 153$
+--------------------------
+What is the Worst-Case running time of the following algorithm in relation to the length $n$ of the input array A?
+
+\begin{algorithmic}
+\Function{MyAlgorithm}{Array $A$}
+\If{A.length $\leq 100$}
+\State \Return{$A[1]$}
+\EndIf
+\State Result = 4 $\cdot$ \texttt{MyAlgorithm}(A[1 ... A.length-1])
+\State \Return{Result}
+\EndFunction
+\end{algorithmic}
+
+Hint: A[1 ... A.length-1] is the Array A without the last element. This operation takes time $O(1)$.
+--------------------------
+The given algorithm is a recursive function that, in each call, processes an array with one less element than the previous call. To analyze its worst-case running time, we can construct a recurrence relation and solve it.
+
+Let T(n) represent the worst-case running time for an input array A of length n. The base case for this recurrence is when n ≤ 100, in which case the running time is constant, O(1).
+
+For n > 100, the algorithm calls itself recursively with an array of length n-1, and the time spent outside the recursion is also constant. Therefore, the recurrence relation can be defined as:
+
+T(n) = T(n-1) + O(1)
+
+This is a linear recurrence relation, which has a worst-case running time of O(n) for an input array A of length n.
+--------------------------
+The diameter of an undirected and unweighted graph corresponds to the largest distance between two nodes in a graph. More specifically, the diameter is
+$$\operatorname{diam}(G) = \max_{(u,v) \in V \times V}\{\operatorname{dist}(u,v)\},$$ where $\operatorname{dist}(u,v)$ corresponds to the length of the shortest path between $u$ and $v$. Provide an algorithm that calculates the diameter of a graph $G=(V,E)$. Describe your algorithm in pseudo-code. Please provide a very short answer.
+--------------------------
+To calculate the diameter of an undirected, unweighted graph G, we can use a Breadth-First Search (BFS) traversal from each node and find the largest distance encountered. Here's a short pseudo-code for the algorithm:
+
+sql
+Copy code
+Function Diameter(G):
+  max_distance = 0
+
+  For each vertex u in V:
+    dist = BFS_Distances(G, u)
+    longest_path = max(dist.values())
+    max_distance = max(max_distance, longest_path)
+
+  Return max_distance
+
+Function BFS_Distances(G, start_vertex):
+  Create a queue Q
+  Initialize distance dictionary dist with start_vertex: 0
+  Enqueue start_vertex into Q
+
+  While Q is not empty:
+    current_vertex = Dequeue(Q)
+
+    For each neighbor v of current_vertex:
+      If v is not in dist:
+        Enqueue v into Q
+        dist[v] = dist[current_vertex] + 1
+
+  Return dist
+
+
+In this algorithm, the Diameter function calculates the diameter of the graph G by iterating through each vertex and computing the BFS_Distances. The largest distance found across all vertices is the diameter of the graph.

@@ -1,0 +1,23 @@
+Hello ChatGPT, I would like to ask you some questions from a computer science exam about algorithms. Are you ready for the questions? Please read the questions carefully and provide short, precise answers.
+--------------------------
+Hello! I'm ready to help you with your computer science exam questions. Please provide the questions, and I'll do my best to give short and precise answers.
+--------------------------
+Give an instance of a knapsack problem with 4 different items and weights where the greedy algorithm does not find the optimal solution. The greedy algorithm selects in each step the item with the best value-weight ratio that still fits in the knapsack.
+--------------------------
+Consider a knapsack with a capacity of 50 units and the following 4 items:
+
+Item A: weight = 40 units, value = 60
+Item B: weight = 25 units, value = 45
+Item C: weight = 25 units, value = 45
+Item D: weight = 10 units, value = 20
+
+Using the greedy algorithm, we first compute the value-weight ratios:
+
+Item A: 60/40 = 1.5
+Item B: 45/25 = 1.8
+Item C: 45/25 = 1.8
+Item D: 20/10 = 2.0
+
+The greedy algorithm selects items in the order D, B (or C), as they have the highest value-weight ratios. The total value is 20 + 45 = 65.
+
+However, the optimal solution is to select items A and C (or A and B), which results in a total value of 60 + 45 = 105. In this instance, the greedy algorithm does not find the optimal solution.
