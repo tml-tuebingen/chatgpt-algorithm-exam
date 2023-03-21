@@ -1,4 +1,8 @@
-## Repository for ''ChatGPT Participates in a Computer Science Exam''
+## ChatGPT Participates in a Computer Science Exam
+
+<p align="center">
+  <img src="img/points.png" width="700" alt="Shapley Values"/>
+</p>
 
 This repository contains the transcript of the conversations with ChatGPT. It accompanies the paper [ChatGPT Participates in a Computer Science Exam](https://arxiv.org/abs/2303.09461) by Sebastian Bordt and Ulrike von Luxburg.
 
